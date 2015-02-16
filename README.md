@@ -19,3 +19,7 @@ MYSQL_DB=db
 MYSQL_USER=user
 MYSQL_PASS=pass
 ```
+
+#### Why insecure?
+
+During setup I created the file `/.pass` to use to lookup the mysql rootpassword for later startup changes (adding the default user). This is not deleted after creating the image. Also the default user/password is *hardcoded* into the `start.sh` script. So please don't use this in production ;). If you have a better idea on how to do this properly, let me know.
