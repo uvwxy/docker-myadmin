@@ -24,7 +24,10 @@ RUN echo "phpmyadmin phpmyadmin/install-error	select	ignore" | debconf-set-selec
 
 RUN apt-get -y install mysql-server-5.6 phpmyadmin
 
+# increase mem + file upload size
 ADD php.ini /etc/php5/apache2/ 
+# static config file
+ADD config.inc.php /etc/phpmyadmin/
 
 ADD start.sh /
 

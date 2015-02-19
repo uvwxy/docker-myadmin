@@ -8,7 +8,7 @@ MYSQL_PASS=pass
 
 # make mysql liston on all connections
 sed -i "s/127\.0\.0\.1/0\.0\.0\.0/g" /etc/mysql/my.cnf
-sed -i "s/pma_/pma__/g" /etc/phpmyadmin/config.inc.php
+#sed -i "s/pma_/pma__/g" /etc/phpmyadmin/config.inc.php
 
 /usr/bin/mysqld_safe > /dev/null 2>&1 &
 
